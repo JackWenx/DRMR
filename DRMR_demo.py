@@ -59,7 +59,7 @@ def get_response_RoleRelation(data, events, key, key_q):
 
     messages,query = concat_messages(make_inputs(context), role_name, role_start)
 
-    events_clique = find_relation_events_clique(events)
+    events_clique = find_relation_events_clique(events, messages)
 
     events_base = find_events_relation(events_clique, context, role_name, user_name, 3)
 
